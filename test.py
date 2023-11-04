@@ -101,6 +101,26 @@ def ukuran() :
         print("----- Maaf Ukuran Tidak Ada Di Dalam Menu -----")
         ukuran()
 
+def xtracheese() :
+    global cheese
+    global tambahCheese
+    global harga_cheese
+
+    harga_cheese = 0
+
+    tambahCheese = (input("Apakah Ingin Menambahkan Ekstar Cheese? (Y/N) : ")).upper()
+    if tambahCheese == 'Y' :
+        print("Extra Cheese Telah Ditambahkan")
+        if ukuran == "1" :
+            harga_cheese = 13636
+        elif ukuran == "2" :
+            harga_cheese = 16364
+        else :
+            harga_cheese = 19091
+    else :
+        print("")
+
+
 pizza()
 crust()
 # ukuran()
