@@ -42,8 +42,40 @@ def pizza () :
         print("----- Maaf Pesanan Tidak Ada Di Dalam Menu -----")
         pizza()
 
+def crust():
+    global namaCrust
+    global harga_crust
+
+    harga_crust = 0
+    # pilihCrust = str(input("Apakah Ingin Menambah Crust (Y/N) : "))
+    # if pilihCrust == "Y":
+    print ("\n                SILAHKAN PILIH Crust              ")
+    print ("| ========== Crust =========== |" " ====== Harga ====== | ")
+    print ("|   1. Pan                      |     Rp.      0     |")
+    print ("|   2. StuffedCrust Cheese      |     Rp. 11.819     |")
+    print ("|   3. StuffedCrust Sausage     |     Rp.  9.091     |")
+    print ("|   4. Cheessy Bites            |     Rp. 13.637     |")
+    print ("  ------ ------ ------- ------- ------ ------ ------")
+
+    pilihCrust = str(input("\nSilahkan Pilih : ")) 
+    if pilihCrust == "1" :
+        namaCrust = "Pan"
+        harga_crust = 0
+    elif pilihCrust == "2" :
+        namaCrust = "StuffedCrust Cheese"
+        harga_crust += 11819
+    elif pilihCrust == "3" :
+        namaCrust = "StuffedCrust Sausage"
+        harga_crust += 9091
+    elif pilihCrust == "4" :
+        namaCrust = "Cheessy Bites"
+        harga_crust += 13637
+    else :
+        print("----- Maaf Crust Tidak Ada Di Dalam Menu -----")
+        crust()
+
 pizza()
-# crust()
+crust()
 # ukuran()
 # xtracheese()
 
