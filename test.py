@@ -74,6 +74,33 @@ def crust():
         print("----- Maaf Crust Tidak Ada Di Dalam Menu -----")
         crust()
 
+def ukuran() :
+    global ukurann
+    global namaUkuran
+    global harga_ukuran
+
+    # pilihUkuran [1="Y" or "y", ]
+    print ("\n                SILAHKAN PILIH UKURAN             ")
+    print ("| ========== Ukuran ========= |" " ====== Harga ===== | ")
+    print ("|   1. Personal                 |     Rp.      0     |")
+    print ("|   2. Regular                  |     Rp. 57.273     |")
+    print ("|   3. Large                    |     Rp. 89.091     |")
+    print ("  ------ ------ ------- ------- ------ ------ ------")
+
+    ukurann = str(input("\nSilahkan Pilih : ")) 
+    if ukurann == "1" :
+        namaUkuran = "Personal"
+        harga_ukuran = 0
+    elif ukurann == "2" :
+        namaUkuran = "Reguler"
+        harga_ukuran = 57273
+    elif ukurann == "3" :
+        namaUkuran = "Large"
+        harga_ukuran = 89091
+    else :
+        print("----- Maaf Ukuran Tidak Ada Di Dalam Menu -----")
+        ukuran()
+
 pizza()
 crust()
 # ukuran()
